@@ -25,7 +25,7 @@ function sync() {
 }
 function chooseModel(key) {state.model=key;viewer?.setModel(key);sync();$('#viewer-status').textContent=`${models[key].name} selected. ${models[key].description}`;}
 $$('[data-model]').forEach(button=>button.addEventListener('click',()=>chooseModel(button.dataset.model)));
-$$('[data-select]').forEach(button=>button.addEventListener('click',()=>{chooseModel(button.dataset.select);$('#showroom').scrollIntoView({behavior:motionQuery.matches?'instant':'smooth'});$(`[data-model="${state.model}"]`).focus({preventScroll:true});}));
+$$('[data-select]').forEach(button=>button.addEventListener('click',()=>{chooseModel(button.dataset.select);$('.showroom').scrollIntoView({behavior:motionQuery.matches?'instant':'smooth'});$(`[data-model="${state.model}"]`).focus({preventScroll:true});}));
 $$('[data-finish]').forEach(button=>button.addEventListener('click',()=>{state.finish=button.dataset.finish;viewer?.setFinish(state.finish);sync();$('#viewer-status').textContent=`${finishes[state.finish]} finish selected.`;}));
 $('#brightness').addEventListener('input',e=>{state.brightness=Number(e.target.value);viewer?.setBrightness(state.brightness);sync();});
 $('#rotate-left').addEventListener('click',()=>viewer?.rotateBy(-.45));

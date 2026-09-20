@@ -5,3 +5,78 @@
 @media(max-width:600px){.hero h1{font-size:clamp(46px,14vw,70px);letter-spacing:-2.8px}.hero h1 br:nth-of-type(2){display:initial}.hero h1 em{margin-left:0}}
 
 .story-image>img{height:auto}
+
+/* Keep touch controls generous without enlarging the finish samples themselves. */
+@media (max-width: 800px), (pointer: coarse) {
+  .icon-button { width: 44px; height: 44px; flex-shrink: 0; font-size: 20px; }
+  .swatch { width: 44px; height: 44px; flex-shrink: 0; border: 0; }
+  .swatch.chalk, .swatch.ember, .swatch.ink { background: transparent; border: 0; }
+  .swatch::before { content: ''; position: absolute; inset: 12px; border-radius: 50%; }
+  .swatch.chalk::before { background: #e6ddd0; }
+  .swatch.ember::before { background: #b24d31; }
+  .swatch.ink::before { background: #303b39; border: 1px solid #82948b; }
+  .swatch::after { inset: 6px; }
+  .finishes>div { gap: 4px; }
+  .model-tabs button { min-height: 44px; }
+  .dimmer input { height: 44px; margin: 0; }
+  .viewer-toolbar { flex-wrap: wrap; }
+  .viewer-toolbar>div { flex-shrink: 0; gap: 5px; }
+  .viewer-toolbar .icon-button:focus-visible { outline-offset: -3px; }
+  .drag-hint { line-height: 1.5; }
+  .header-cta { min-height: 44px; }
+  select { min-height: 48px; font-size: 16px; }
+}
+
+@media (max-width: 800px) {
+  .hero { display: flex; flex-direction: column; gap: 32px; }
+  .hero-copy { padding-top: 6px; }
+  .hero-description { max-width: 420px; font-size: 14px; }
+  .hero-footnote { display: none; }
+  .showroom { width: 100%; scroll-margin-top: 24px; }
+  .stage { width: 100%; min-width: 0; height: auto; aspect-ratio: 1 / 1.15; min-height: 340px; max-height: 500px; }
+  .stage canvas { position: absolute; inset: 0 0 auto; height: calc(100% - 78px); }
+  .stage-fallback { inset: 28px 0 78px; height: calc(100% - 106px); }
+  .stage-floor-label { bottom: 81px; }
+  .viewer-toolbar { min-height: 68px; align-content: end; gap: 8px; }
+  .drag-hint { flex: 1 1 130px; font-size: 11px; }
+  .stage-caption { font-size: 9px; }
+  .model-heading .eyebrow { font-size: 9px; }
+  .model-heading h2 { font-size: 32px; }
+  .model-heading h2 span { font-size: 12px; }
+  .finishes legend, .dimmer label, .finishes legend span, .dimmer output { font-size: 12px; }
+  .model-tabs button { font-size: 12px; }
+  .model-tabs button span { font-size: 10px; margin-right: 5px; }
+  .story-grid { grid-template-columns: 1fr; gap: 32px; }
+  .story-image>img { aspect-ratio: 1.1; }
+  .story-copy>p:not(.eyebrow) { max-width: 100%; font-size: 14px; }
+  .design-notes p { font-size: 13px; }
+  .product-row p { font-size: 12px; }
+  .closing p:not(.eyebrow) { font-size: 14px; }
+  .footer-bottom { font-size: 11px; }
+  .footer-top>a:last-child { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; }
+  .dialog-intro { font-size: 14px; }
+  .field-label, .brief-summary>span:last-child, .demo-note, #download-status { font-size: 12px; }
+}
+
+@media (max-width: 600px) {
+  .header { gap: 10px; }
+  .header-cta { flex-shrink: 0; gap: 8px; padding: 10px; font-size: 11px; }
+  .hero .eyebrow, .story-copy>.eyebrow, .section-heading .eyebrow, .closing .eyebrow { font-size: 10px; }
+  .hero-copy>.button, .closing .button { font-size: 13px; min-height: 48px; }
+  .manifesto-strip>.wrap { flex-wrap: wrap; column-gap: 12px; row-gap: 8px; font-size: 10px; }
+  .section-heading>p { font-size: 14px; }
+  .section-heading>p>span { font-size: 12px; }
+  .text-link { min-height: 44px; align-items: center; font-size: 13px; }
+  .story-signoff { font-size: 12px; }
+  .closing p:not(.eyebrow) { max-width: 300px; }
+  .footer-bottom a { display: inline-flex; align-items: center; min-height: 44px; }
+  dialog h2 { font-size: clamp(38px, 11vw, 50px); }
+  .download-button { gap: 12px; padding-inline: 16px; }
+}
+
+@media (max-width: 420px) {
+  .config-row { grid-template-columns: 1fr; gap: 20px; }
+  .finishes { border-right: 0; padding-right: 0; }
+  .finishes legend, .dimmer label { margin-bottom: 4px; }
+  .viewer-toolbar>div { margin-left: auto; }
+}
