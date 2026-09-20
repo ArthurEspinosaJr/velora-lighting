@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#112426">
+  <meta name="description" content="VELORA — a fictional lighting studio exploring sculptural forms and softer spaces. Step inside an interactive 3D collection.">
+  <meta property="og:title" content="VELORA — Light, thoughtfully shaped.">
+  <meta property="og:description" content="Step inside an interactive 3D lighting studio. Three forms. One feeling.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arthurespinosajr.github.io/velora-lighting/">
+  <meta property="og:image" content="https://arthurespinosajr.github.io/velora-lighting/interior.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>VELORA — Light, thoughtfully shaped.</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header wrap">
+    <a class="wordmark" href="#" aria-label="Velora home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 7h8l5 13 5-13h8L16 30z" fill="currentColor"/><circle cx="16" cy="4" r="2" fill="currentColor"/></svg>VELORA<span>®</span></a>
+    <nav aria-label="Main navigation"><a href="#collection">The collection</a><a href="#philosophy">Our philosophy</a></nav>
+    <button class="header-cta" data-open-brief>Make it yours <span aria-hidden="true">↗</span></button>
+  </header>
+  <main id="main">
+    <section class="hero wrap" id="showroom" aria-labelledby="hero-heading">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> THE ART OF EVERYDAY LIGHT</p>
+        <h1 id="hero-heading">A little light.<br>A different<br><em>feeling.</em></h1>
+        <p class="hero-description">Sculptural lighting for the spaces you call yours.<br class="desktop-break"> Considered forms. A softer way to live.</p>
+        <a class="button orange" href="#collection">Find your light <span aria-hidden="true">↗</span></a>
+        <div class="hero-footnote"><span class="fine-line"></span><p>OBJECTS OF ATMOSPHERE<br><span>Collection No. 01 — The quiet hours</span></p></div>
+      </div>
+      <div class="showroom">
+        <div class="stage" id="stage">
+          <div class="stage-halo" aria-hidden="true"></div>
+          <span class="stage-index" aria-hidden="true">01 / 03</span>
+          <div class="stage-caption"><span class="live-dot"></span> LIVE 3D STUDIO</div>
+          <canvas id="lamp-canvas" aria-label="Interactive 3D Mora table lamp. Drag horizontally to rotate, or use the rotate buttons below."></canvas>
+          <img class="stage-fallback" src="./interior.png" alt="An ivory dome lamp casts a warm glow across a walnut sideboard." hidden>
+          <p class="loader" id="loader"><span></span> Shaping the light…</p>
+          <div class="stage-floor-label" aria-hidden="true">DESIGNED TO FEEL DIFFERENT.</div>
+          <div class="viewer-toolbar"><span class="drag-hint">↔ &nbsp;Drag to explore</span><div><button class="icon-button" id="rotate-left" aria-label="Rotate lamp left">↶</button><button class="icon-button" id="rotate-right" aria-label="Rotate lamp right">↷</button><button class="icon-button" id="pause-motion" aria-label="Pause automatic rotation" aria-pressed="false"><span id="pause-icon">Ⅱ</span></button><button class="icon-button" id="reset-view" aria-label="Reset lamp view">⟲</button></div></div>
+        </div>
+        <div class="configurator">
+          <div class="model-heading"><div><p class="eyebrow">MEET YOUR EVENING COMPANION</p><h2 id="current-model">Mora <span>Table light</span></h2></div><span class="model-number" id="model-number">01</span></div>
+          <div class="config-row"><fieldset class="finishes"><legend>Finish <span id="finish-name">Chalk</span></legend><div><button class="swatch chalk" data-finish="chalk" aria-label="Chalk finish" aria-pressed="true"></button><button class="swatch ember" data-finish="ember" aria-label="Ember finish" aria-pressed="false"></button><button class="swatch ink" data-finish="ink" aria-label="Ink finish" aria-pressed="false"></button></div></fieldset><div class="dimmer"><label for="brightness">Set the mood <output id="brightness-value" for="brightness">70%</output></label><div><span aria-hidden="true">☼</span><input id="brightness" type="range" min="0" max="100" value="70" aria-label="Light brightness"><span aria-hidden="true">☀</span></div></div></div>
+          <div class="model-tabs" role="group" aria-label="Choose a lamp design"><button data-model="mora" aria-pressed="true"><span>01</span> Mora</button><button data-model="arc" aria-pressed="false"><span>02</span> Arc</button><button data-model="column" aria-pressed="false"><span>03</span> Column</button></div>
+          <p class="sr-only" role="status" id="viewer-status"></p>
+        </div>
+      </div>
+    </section>
+    <div class="manifesto-strip" aria-label="Our design values"><div class="wrap"><span>Less noise. More atmosphere.</span><span class="strip-symbol" aria-hidden="true">✳</span><span>Soft light. Strong character.</span><span class="strip-symbol" aria-hidden="true">✳</span><span>Made for your everyday.</span></div></div>
+    <section class="philosophy light-section" id="philosophy">
+      <div class="wrap story-grid">
+        <div class="story-image reveal"><img src="./interior.png" width="1536" height="1024" loading="lazy" alt="Mora, an ivory sculptural lamp, glowing on a walnut sideboard in a quiet sunlit room."><div class="image-label"><span>A STUDY IN WARMTH</span><span>01 — MORA</span></div></div>
+        <div class="story-copy reveal"><p class="eyebrow">A QUIETER KIND OF STATEMENT</p><h2>Good light changes<br>more than <em>a room.</em></h2><p>It’s the last page of a good book. The conversation that runs a little longer. That first moment of stillness when you get home.</p><p>VELORA is an exploration of those small, ordinary moments. Simple silhouettes, tactile finishes, and a glow that makes a space feel like you.</p><a class="text-link" href="#collection">Discover the collection <span aria-hidden="true">↗</span></a><div class="story-signoff"><span class="sun-mark" aria-hidden="true">✳</span><span>A little less bright.<br>A little more beautiful.</span></div></div>
+      </div>
+    </section>
+    <section class="collection light-section" id="collection" aria-labelledby="collection-heading">
+      <div class="wrap">
+        <div class="section-heading reveal"><div><p class="eyebrow">THE QUIET HOURS / COLLECTION 01</p><h2 id="collection-heading">Three forms.<br>One <em>feeling.</em></h2></div><p>A curve, a line, a rhythm.<br>Find the shape that feels like home.<br><span>Choose a design to explore it in 3D.</span></p></div>
+        <div class="collection-list">
+          <button class="product-row reveal" data-select="mora" aria-label="Explore Mora in the 3D studio"><span class="product-index">01</span><div><h3>Mora</h3><p>A soft silhouette. An instant sense of calm.</p></div><span class="product-type">THE EVERYDAY COMPANION</span><span class="product-arrow" aria-hidden="true">↗</span></button>
+          <button class="product-row reveal" data-select="arc" aria-label="Explore Arc in the 3D studio"><span class="product-index">02</span><div><h3>Arc</h3><p>A sweeping gesture with a lighter presence.</p></div><span class="product-type">THE QUIET STATEMENT</span><span class="product-arrow" aria-hidden="true">↗</span></button>
+          <button class="product-row reveal" data-select="column" aria-label="Explore Column in the 3D studio"><span class="product-index">03</span><div><h3>Column</h3><p>Rhythm, texture, and a warm point of focus.</p></div><span class="product-type">THE SCULPTURAL ONE</span><span class="product-arrow" aria-hidden="true">↗</span></button>
+        </div>
+        <div class="design-notes reveal"><div><span>01 / FORM</span><h3>Beautiful at every angle.</h3><p>Balanced proportions that hold their own, even when the light is off.</p></div><div><span>02 / FINISH</span><h3>Make it feel like you.</h3><p>Chalk, Ember, or Ink. Three considered colours, each with its own character.</p></div><div><span>03 / FEELING</span><h3>Your evening, your way.</h3><p>Turn the glow up for a chapter. Bring it down for a slower kind of night.</p></div></div>
+      </div>
+    </section>
+    <section class="closing"><div class="wrap reveal"><p class="eyebrow">FIND YOUR OWN KIND OF WARMTH</p><h2>Let’s set <em>the mood.</em></h2><p>Choose your form. Find your finish. Make space for a little light.</p><button class="button orange" data-open-brief>Create your lighting brief <span aria-hidden="true">↗</span></button><span class="closing-star" aria-hidden="true">✳</span></div></section>
+  </main>
+  <footer class="wrap"><div class="footer-top"><a class="wordmark" href="#" aria-label="Velora home">VELORA<span>®</span></a><p>Light, thoughtfully shaped.</p><a href="#showroom">Back to the light ↑</a></div><div class="footer-bottom"><p>VELORA is a fictional design concept. No products are sold through this site.</p><p>Interactive concept by <a href="https://arthurespinosajr.github.io/quoteforge/">QuoteForge ↗</a></p></div></footer>
+  <dialog id="brief-dialog" aria-labelledby="brief-title"><form method="dialog"><button class="dialog-close icon-button" aria-label="Close lighting brief">×</button></form><p class="eyebrow">YOUR OWN KIND OF WARMTH</p><h2 id="brief-title">A little light.<br><em>All yours.</em></h2><p class="dialog-intro">Save a lighting concept for your space.</p><div class="brief-summary"><span id="brief-model">Mora</span><span id="brief-finish">Chalk · 70% glow</span></div><label class="field-label" for="room">Where would it live?</label><select id="room"><option>Living room</option><option>Bedside</option><option>Reading nook</option><option>Workspace</option><option>Entryway</option></select><button class="button orange download-button" id="download-brief">Download my concept <span aria-hidden="true">↓</span></button><p class="demo-note">This is a fictional collection. Your brief downloads to your device; no details are submitted and no order is placed.</p><p id="download-status" role="status"></p></dialog>
+</body>
+</html>
